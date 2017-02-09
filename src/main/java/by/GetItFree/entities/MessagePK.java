@@ -3,7 +3,7 @@ package by.GetItFree.entities;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.io.Serializable;
-
+//test comment
 /**
  * Created by Novik Igor on 09.02.2017.
  */
