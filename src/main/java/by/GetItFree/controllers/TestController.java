@@ -12,9 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class TestController {
     @RequestMapping(value = "/testCall", method = RequestMethod.GET)
     public ModelAndView readCookieExample() {
-        System.out.println("CookieController readCookieExample() is called");
-        //you can use also " @CookieValue(value = "cookieName") String cookieName " >cookieName = Cookie.getName();
-        String cookieValue = "Трынь трынь ПАРАХОД ГУДИТ111";
+        System.out.println(" Test console");
         return new ModelAndView("/error/errorpage");
     }
 }
