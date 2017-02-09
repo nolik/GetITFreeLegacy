@@ -128,4 +128,18 @@ public class Message {
     public void setProfile(Profile profile) {
         this.profile = profile;
     }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "id=" + id +
+                ", toPerson='" + toPerson + '\'' +
+                ", header='" + header + '\'' +
+                ", content='" + content + '\'' +
+                ", profileId=" + profileId +
+                ", profileUsersUsername='" + profileUsersUsername + '\'' +
+                ", data=" + data +
+                ", profile=" + profile +
+                '}';
+    }
 }

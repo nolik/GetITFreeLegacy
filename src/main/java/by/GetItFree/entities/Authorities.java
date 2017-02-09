@@ -60,4 +60,13 @@ public class Authorities {
     public void setUsersByUsername(Users usersByUsername) {
         this.usersByUsername = usersByUsername;
     }
+
+    @Override
+    public String toString() {
+        return "Authorities{" +
+                "id=" + id +
+                ", authority='" + authority + '\'' +
+                ", usersByUsername=" + usersByUsername +
+                '}';
+    }
 }

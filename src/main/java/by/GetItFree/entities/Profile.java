@@ -133,4 +133,19 @@ public class Profile {
     public void setUsersByUsersUsername(Users usersByUsersUsername) {
         this.usersByUsersUsername = usersByUsersUsername;
     }
+
+    @Override
+    public String toString() {
+        return "Profile{" +
+                "id=" + id +
+                ", usersUsername='" + usersUsername + '\'' +
+                ", karma=" + karma +
+                ", phone='" + phone + '\'' +
+                ", icon=" + Arrays.toString(icon) +
+                ", adverts=" + adverts +
+                ", comments=" + comments +
+                ", messages=" + messages +
+                ", usersByUsersUsername=" + usersByUsersUsername +
+                '}';
+    }
 }

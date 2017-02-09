@@ -126,4 +126,18 @@ public class Comment {
     public void setProfile(Profile profile) {
         this.profile = profile;
     }
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", message='" + message + '\'' +
+                ", date=" + date +
+                ", advertId=" + advertId +
+                ", profileId=" + profileId +
+                ", profileUsersUsername='" + profileUsersUsername + '\'' +
+                ", advertByAdvertId=" + advertByAdvertId +
+                ", profile=" + profile +
+                '}';
+    }
 }

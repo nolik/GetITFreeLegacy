@@ -165,4 +165,21 @@ public class Advert {
     public void setCommentsById(Collection<Comment> commentsById) {
         this.commentsById = commentsById;
     }
+
+    @Override
+    public String toString() {
+        return "Advert{" +
+                "id=" + id +
+                ", karmaReq='" + karmaReq + '\'' +
+                ", image=" + Arrays.toString(image) +
+                ", profileId=" + profileId +
+                ", profileUsersUsername='" + profileUsersUsername + '\'' +
+                ", head='" + head + '\'' +
+                ", content='" + content + '\'' +
+                ", ordered=" + ordered +
+                ", date=" + date +
+                ", profile=" + profile +
+                ", commentsById=" + commentsById +
+                '}';
+    }
 }

@@ -83,4 +83,15 @@ public class Users {
     public void setProfilesByUsername(Collection<Profile> profilesByUsername) {
         this.profilesByUsername = profilesByUsername;
     }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", enabled=" + enabled +
+                ", authoritiesByUsername=" + authoritiesByUsername +
+                ", profilesByUsername=" + profilesByUsername +
+                '}';
+    }
 }
