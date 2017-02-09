@@ -1,9 +1,6 @@
 package by.GetItFree.entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by Novik Igor on 09.02.2017.
@@ -12,6 +9,7 @@ import javax.persistence.Id;
 public class Authorities {
     private int id;
     private String authority;
+    private Users usersByUsername;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -51,5 +49,15 @@ public class Authorities {
         int result = id;
         result = 31 * result + (authority != null ? authority.hashCode() : 0);
         return result;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "username", referencedColumnName = "username", nullable = false, insertable = false, updatable = false)
+    public Users getUsersByUsername() {
+        return usersByUsername;
+    }
+
+    public void setUsersByUsername(Users usersByUsername) {
+        this.usersByUsername = usersByUsername;
     }
 }

@@ -16,6 +16,7 @@ public class Message {
     private int profileId;
     private String profileUsersUsername;
     private Timestamp data;
+    private Profile profile;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -116,5 +117,15 @@ public class Message {
         result = 31 * result + (profileUsersUsername != null ? profileUsersUsername.hashCode() : 0);
         result = 31 * result + (data != null ? data.hashCode() : 0);
         return result;
+    }
+
+    @ManyToOne
+    @JoinColumns({@JoinColumn(name = "profile_id", referencedColumnName = "id", nullable = false, insertable = false, updatable = false), @JoinColumn(name = "profile_users_username", referencedColumnName = "users_username", nullable = false, insertable = false, updatable = false)})
+    public Profile getProfile() {
+        return profile;
+    }
+
+    public void setProfile(Profile profile) {
+        this.profile = profile;
     }
 }

@@ -15,6 +15,8 @@ public class Comment {
     private int advertId;
     private int profileId;
     private String profileUsersUsername;
+    private Advert advertByAdvertId;
+    private Profile profile;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -103,5 +105,25 @@ public class Comment {
         result = 31 * result + profileId;
         result = 31 * result + (profileUsersUsername != null ? profileUsersUsername.hashCode() : 0);
         return result;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "advert_id", referencedColumnName = "id", nullable = false, insertable = false, updatable = false)
+    public Advert getAdvertByAdvertId() {
+        return advertByAdvertId;
+    }
+
+    public void setAdvertByAdvertId(Advert advertByAdvertId) {
+        this.advertByAdvertId = advertByAdvertId;
+    }
+
+    @ManyToOne
+    @JoinColumns({@JoinColumn(name = "profile_id", referencedColumnName = "id", nullable = false, insertable = false, updatable = false), @JoinColumn(name = "profile_users_username", referencedColumnName = "users_username", nullable = false, insertable = false, updatable = false)})
+    public Profile getProfile() {
+        return profile;
+    }
+
+    public void setProfile(Profile profile) {
+        this.profile = profile;
     }
 }
