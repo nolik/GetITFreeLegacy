@@ -4,10 +4,10 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 /**
- * Created by nolik on 07.02.17.
+ * Created by Novik Igor on 09.02.2017.
  */
 @Entity
-@Table(name = "persistent_logins", schema = "getItFree", catalog = "")
+@Table(name = "persistent_logins", schema = "getitfree", catalog = "")
 public class PersistentLogins {
     private String username;
     private String series;
@@ -76,15 +76,5 @@ public class PersistentLogins {
         result = 31 * result + (token != null ? token.hashCode() : 0);
         result = 31 * result + (lastUsed != null ? lastUsed.hashCode() : 0);
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return "PersistentLogins{" +
-                "username='" + username + '\'' +
-                ", series='" + series + '\'' +
-                ", token='" + token + '\'' +
-                ", lastUsed=" + lastUsed +
-                '}';
     }
 }

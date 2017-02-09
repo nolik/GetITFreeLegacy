@@ -2,10 +2,9 @@ package by.GetItFree.entities;
 
 import javax.persistence.*;
 import java.util.Arrays;
-import java.util.Collection;
 
 /**
- * Created by nolik on 07.02.17.
+ * Created by Novik Igor on 09.02.2017.
  */
 @Entity
 @IdClass(ProfilePK.class)
@@ -15,10 +14,6 @@ public class Profile {
     private Integer karma;
     private String phone;
     private byte[] icon;
-    private Collection<Advert> adverts;
-    private Collection<Comment> comments;
-    private Collection<Message> messages;
-    private Users usersByUsersUsername;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -95,57 +90,5 @@ public class Profile {
         result = 31 * result + (phone != null ? phone.hashCode() : 0);
         result = 31 * result + Arrays.hashCode(icon);
         return result;
-    }
-
-    @OneToMany(mappedBy = "profile")
-    public Collection<Advert> getAdverts() {
-        return adverts;
-    }
-
-    public void setAdverts(Collection<Advert> adverts) {
-        this.adverts = adverts;
-    }
-
-    @OneToMany(mappedBy = "profile")
-    public Collection<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(Collection<Comment> comments) {
-        this.comments = comments;
-    }
-
-    @OneToMany(mappedBy = "profile")
-    public Collection<Message> getMessages() {
-        return messages;
-    }
-
-    public void setMessages(Collection<Message> messages) {
-        this.messages = messages;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "users_username", referencedColumnName = "username", nullable = false)
-    public Users getUsersByUsersUsername() {
-        return usersByUsersUsername;
-    }
-
-    public void setUsersByUsersUsername(Users usersByUsersUsername) {
-        this.usersByUsersUsername = usersByUsersUsername;
-    }
-
-    @Override
-    public String toString() {
-        return "Profile{" +
-                "id=" + id +
-                ", usersUsername='" + usersUsername + '\'' +
-                ", karma=" + karma +
-                ", phone='" + phone + '\'' +
-                ", icon=" + Arrays.toString(icon) +
-                ", adverts=" + adverts +
-                ", comments=" + comments +
-                ", messages=" + messages +
-                ", usersByUsersUsername=" + usersByUsersUsername +
-                '}';
     }
 }

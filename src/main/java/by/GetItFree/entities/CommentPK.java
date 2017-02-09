@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by nolik on 07.02.17.
+ * Created by Novik Igor on 09.02.2017.
  */
 public class CommentPK implements Serializable {
     private int id;
@@ -76,15 +76,5 @@ public class CommentPK implements Serializable {
         result = 31 * result + profileId;
         result = 31 * result + (profileUsersUsername != null ? profileUsersUsername.hashCode() : 0);
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return "CommentPK{" +
-                "id=" + id +
-                ", advertId=" + advertId +
-                ", profileId=" + profileId +
-                ", profileUsersUsername='" + profileUsersUsername + '\'' +
-                '}';
     }
 }

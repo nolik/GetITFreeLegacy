@@ -1,18 +1,18 @@
 package by.GetItFree.entities;
 
-import javax.persistence.*;
-import java.util.Collection;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
- * Created by nolik on 07.02.17.
+ * Created by Novik Igor on 09.02.2017.
  */
 @Entity
 public class Users {
     private String username;
     private String password;
     private byte enabled;
-    private Collection<Authorities> authoritiesByUsername;
-    private Collection<Profile> profilesByUsername;
 
     @Id
     @Column(name = "username", nullable = false, length = 45)
@@ -64,34 +64,5 @@ public class Users {
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (int) enabled;
         return result;
-    }
-
-    @OneToMany(mappedBy = "usersByUsername")
-    public Collection<Authorities> getAuthoritiesByUsername() {
-        return authoritiesByUsername;
-    }
-
-    public void setAuthoritiesByUsername(Collection<Authorities> authoritiesByUsername) {
-        this.authoritiesByUsername = authoritiesByUsername;
-    }
-
-    @OneToMany(mappedBy = "usersByUsersUsername")
-    public Collection<Profile> getProfilesByUsername() {
-        return profilesByUsername;
-    }
-
-    public void setProfilesByUsername(Collection<Profile> profilesByUsername) {
-        this.profilesByUsername = profilesByUsername;
-    }
-
-    @Override
-    public String toString() {
-        return "Users{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", enabled=" + enabled +
-                ", authoritiesByUsername=" + authoritiesByUsername +
-                ", profilesByUsername=" + profilesByUsername +
-                '}';
     }
 }
