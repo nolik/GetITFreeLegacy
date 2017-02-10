@@ -132,6 +132,13 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- Support methods from google. For example 'Lists.newArrayList()'-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+        </dependency>
+
 
     </dependencies>
     <!--https://startbootstrap.com/template-overviews/3-col-portfolio/  this is theme-->
