@@ -1,4 +1,4 @@
-package by.GetItFree.dao.interfaces;
+package by.GetItFree.orm.interfaces;
 
 import by.GetItFree.entities.Advert;
 
@@ -21,8 +21,8 @@ public interface AdvertDAO {
     /**
      * Method returned list of Advert from the DB according ID.
      *
-     * @param id id of the Advert;
+     * @param head id of the Advert;
      * @return Advertising according id.
      */
-    Advert findByiD(int id);
+    Advert findByHead(String head);
 }

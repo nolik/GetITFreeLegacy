@@ -1,7 +1,7 @@
-package by.GetItFree.dao.impl;
+package by.GetItFree.orm.impl;
 
-import by.GetItFree.dao.interfaces.AdvertDAO;
-import by.GetItFree.dao.repository.AdvertDAORepository;
+import by.GetItFree.orm.interfaces.AdvertDAO;
+import by.GetItFree.orm.repository.AdvertDAORepository;
 import by.GetItFree.entities.Advert;
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +32,8 @@ public class AdvertDAOImpl implements AdvertDAO {
     }
 
     @Override
-    public Advert findByiD(int id) {
+    public Advert findByHead(String head) {
 
-        return (Advert) advertDAORepository.findByID(id);
+        return (Advert) advertDAORepository.findByHead(head);
     }
 }
