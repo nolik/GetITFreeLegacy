@@ -1,7 +1,9 @@
 package by.GetItFree.controllers;
 
 import by.GetItFree.entities.Advert;
+import by.GetItFree.entities.Comment;
 import by.GetItFree.orm.interfaces.AdvertDAO;
+import by.GetItFree.orm.interfaces.CommentDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +20,8 @@ public class TestController {
 
     @Autowired
     AdvertDAO jpaAdvertDAO;
-
+    @Autowired
+    CommentDAO jpaCommentDAO;
 
     @RequestMapping(value = "/testCall", method = RequestMethod.GET)
     public ModelAndView readCookieExample() {
@@ -36,5 +39,12 @@ public class TestController {
          return new ModelAndView("/error/test", "resultObject", adverts);
 //        return new ModelAndView("/error/test");
     }
-
+    @RequestMapping(value = "/jpaFindAllComments", method= RequestMethod.GET)
+    public ModelAndView jpaFindAllComments() {
+        System.out.println("ORMController FindAllComments is called");
+        //  List<Advert> adverts = jpaAdvertDAO.findAll();
+        List<Comment> comments = jpaCommentDAO.findAll();
+        return new ModelAndView("/error/comments", "resultObject", comments);
+//        return new ModelAndView("/error/test");
+    }
 }

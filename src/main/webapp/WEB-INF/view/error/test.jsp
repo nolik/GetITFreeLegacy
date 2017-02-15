@@ -11,6 +11,6 @@
     <title>Test</title>
 </head>
 <body>
-${adverts}
+<a href="${adverts}" class="list-group-item">Find All Adverts</a>
 </body>
 </html>

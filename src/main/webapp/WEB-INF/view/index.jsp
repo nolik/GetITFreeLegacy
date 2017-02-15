@@ -72,7 +72,7 @@
     <div class="row">
         <div class="col-md-4 portfolio-item">
             <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj1.jpg" alt="">
             </a>
             <h3>
                 <a href="#">Продам гараж</a>
@@ -81,7 +81,7 @@
         </div>
         <div class="col-md-4 portfolio-item">
             <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj2.jpg" alt="">
             </a>
             <h3>
                 <a href="#">Продам гараж</a>
@@ -90,7 +90,7 @@
         </div>
         <div class="col-md-4 portfolio-item">
             <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj5.jpg" alt="">
             </a>
             <h3>
                 <a href="#">Продам гараж</a>
@@ -104,28 +104,28 @@
     <div class="row">
         <div class="col-md-4 portfolio-item">
             <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj4.jpg" alt="">
             </a>
             <h3>
-                <a href="#">Project Name</a>
+                <a href="#">Продам гараж</a>
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
         <div class="col-md-4 portfolio-item">
             <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj3.jpg" alt="">
             </a>
             <h3>
-                <a href="#">Project Name</a>
+                <a href="#">Продам гараж</a>
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
         <div class="col-md-4 portfolio-item">
             <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj6.jpg" alt="">
             </a>
             <h3>
-                <a href="#">Project Name</a>
+                <a href="#">Продам гараж</a>
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
@@ -135,28 +135,28 @@
     <div class="row">
         <div class="col-md-4 portfolio-item">
             <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj7.jpg" alt="">
             </a>
             <h3>
-                <a href="#">Project Name</a>
+                <a href="#">Продам гараж</a>
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
         <div class="col-md-4 portfolio-item">
             <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj8.jpg" alt="">
             </a>
             <h3>
-                <a href="#">Project Name</a>
+                <a href="#">Продам гараж</a>
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
         <div class="col-md-4 portfolio-item">
             <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj9.jpg" alt="">
             </a>
             <h3>
-                <a href="#">Project Name</a>
+                <a href="#">Продам гараж</a>
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
