@@ -178,7 +178,7 @@ public class Advert {
                 ", content='" + content + '\'' +
                 ", ordered=" + ordered +
                 ", date=" + date +
-                ", profile=" + profile +
+//                ", profile=" + profile +
                 ", commentsById=" + commentsById +
                 '}';
     }

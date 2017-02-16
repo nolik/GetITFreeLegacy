@@ -31,20 +31,19 @@ public class TestController {
 
     }
 
-    @RequestMapping(value = "/jpaFindAllAdvert", method= RequestMethod.GET)
+    @RequestMapping(value = "/jpaFindAllAdvert", method = RequestMethod.GET)
     public ModelAndView jpaFindAllAdvert() {
         System.out.println("ORMController ormFindAllUsers is called");
-      //  List<Advert> adverts = jpaAdvertDAO.findAll();
         List<Advert> adverts = jpaAdvertDAO.findAll();
-         return new ModelAndView("/error/test", "resultObject", adverts);
-//        return new ModelAndView("/error/test");
+        return new ModelAndView("/error/test", "resultObject", adverts);
+
     }
-    @RequestMapping(value = "/jpaFindAllComments", method= RequestMethod.GET)
+
+    @RequestMapping(value = "/jpaFindAllComments", method = RequestMethod.GET)
     public ModelAndView jpaFindAllComments() {
         System.out.println("ORMController FindAllComments is called");
-        //  List<Advert> adverts = jpaAdvertDAO.findAll();
         List<Comment> comments = jpaCommentDAO.findAll();
-        return new ModelAndView("/error/comments", "resultObject", comments);
-//        return new ModelAndView("/error/test");
+        return new ModelAndView("/error/test", "resultObject", comments);
+
     }
 }
