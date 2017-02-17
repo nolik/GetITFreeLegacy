@@ -44,6 +44,10 @@ public class TestController {
         System.out.println("ORMController FindAllComments is called");
         List<Comment> comments = jpaCommentDAO.findAll();
         return new ModelAndView("/error/test", "resultObject", comments);
+    }
 
+    @RequestMapping(value = "/runtimeException", method = RequestMethod.GET)
+    public void throwException() {
+        throw new RuntimeException();
     }
 }

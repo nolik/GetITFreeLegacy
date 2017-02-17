@@ -13,6 +13,9 @@
 <body>
 <%--<a href="${adverts}" class="list-group-item">Find All Adverts</a>--%>
 
+
+<b />
 ${resultObject}
+
 </body>
 </html>
