@@ -31,7 +31,7 @@ public class TestController {
 
     }
 
-    @RequestMapping(value = "/jr", method = RequestMethod.GET)
+    @RequestMapping(value = "/jpaFindAllAdvert", method = RequestMethod.GET)
     public ModelAndView jpaFindAllAdvert() {
         System.out.println("ORMController ormFindAllUsers is called");
         List<Advert> adverts = jpaAdvertORMService.findAll();

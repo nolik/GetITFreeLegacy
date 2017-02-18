@@ -33,6 +33,9 @@
         <!--Slf4J-->
         <slf4j-version>1.7.22</slf4j-version>
 
+        <!-- JUnit test -->
+        <junit.version>4.12</junit.version>
+
     </properties>
 
     <dependencyManagement>
@@ -137,6 +140,22 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>20.0</version>
+        </dependency>
+
+
+        <!--JUnit Test-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Test Artifacts with Spring-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
 
