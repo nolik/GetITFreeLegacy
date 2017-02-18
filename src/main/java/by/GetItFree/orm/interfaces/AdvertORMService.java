@@ -9,7 +9,7 @@ import java.util.List;
  * <p>
  * Created by Novik Igor on 09.02.2017.
  */
-public interface AdvertDAO {
+public interface AdvertORMService {
 
     /**
      * Method returned list of Advert's from the DB.

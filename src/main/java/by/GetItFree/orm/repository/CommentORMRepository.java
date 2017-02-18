@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by max on 10.02.2017.
  */
-public interface CommentDAORepository extends CrudRepository<Comment,Integer> {
+public interface CommentORMRepository extends CrudRepository<Comment,Integer> {
     List<Comment> findByMessage(String message);
 
 }

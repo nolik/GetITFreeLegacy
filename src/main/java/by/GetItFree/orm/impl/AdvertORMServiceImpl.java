@@ -1,7 +1,7 @@
 package by.GetItFree.orm.impl;
 
-import by.GetItFree.orm.interfaces.AdvertDAO;
-import by.GetItFree.orm.repository.AdvertDAORepository;
+import by.GetItFree.orm.interfaces.AdvertORMService;
+import by.GetItFree.orm.repository.AdvertORMRepository;
 import by.GetItFree.entities.Advert;
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,23 +17,23 @@ import java.util.List;
  * Created by nolik on 10.02.17.
  */
 
-@Service("jpaAdvertDAO")
+@Service("jpaAdvertORMService")
 @Repository
 @Transactional
-public class AdvertDAOImpl implements AdvertDAO {
+public class AdvertORMServiceImpl implements AdvertORMService {
 
     @Autowired
-    private AdvertDAORepository advertDAORepository;
+    private AdvertORMRepository advertORMRepository;
 
     @Override
     public List<Advert> findAll() {
 
-        return Lists.newArrayList(advertDAORepository.findAll());
+        return Lists.newArrayList(advertORMRepository.findAll());
     }
 
     @Override
     public Advert findByHead(String head) {
 
-        return (Advert) advertDAORepository.findByHead(head);
+        return (Advert) advertORMRepository.findByHead(head);
     }
 }

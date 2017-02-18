@@ -2,8 +2,8 @@ package by.GetItFree.controllers;
 
 import by.GetItFree.entities.Advert;
 import by.GetItFree.entities.Comment;
-import by.GetItFree.orm.interfaces.AdvertDAO;
-import by.GetItFree.orm.interfaces.CommentDAO;
+import by.GetItFree.orm.interfaces.AdvertORMService;
+import by.GetItFree.orm.interfaces.CommentORMService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,9 +19,9 @@ import java.util.List;
 public class TestController {
 
     @Autowired
-    AdvertDAO jpaAdvertDAO;
+    private AdvertORMService jpaAdvertORMService;
     @Autowired
-    CommentDAO jpaCommentDAO;
+    private CommentORMService jpaCommentORMService;
 
     @RequestMapping(value = "/testCall", method = RequestMethod.GET)
     public ModelAndView readCookieExample() {
@@ -31,10 +31,10 @@ public class TestController {
 
     }
 
-    @RequestMapping(value = "/jpaFindAllAdvert", method = RequestMethod.GET)
+    @RequestMapping(value = "/jr", method = RequestMethod.GET)
     public ModelAndView jpaFindAllAdvert() {
         System.out.println("ORMController ormFindAllUsers is called");
-        List<Advert> adverts = jpaAdvertDAO.findAll();
+        List<Advert> adverts = jpaAdvertORMService.findAll();
         return new ModelAndView("/error/test", "resultObject", adverts);
 
     }
@@ -42,7 +42,7 @@ public class TestController {
     @RequestMapping(value = "/jpaFindAllComments", method = RequestMethod.GET)
     public ModelAndView jpaFindAllComments() {
         System.out.println("ORMController FindAllComments is called");
-        List<Comment> comments = jpaCommentDAO.findAll();
+        List<Comment> comments = jpaCommentORMService.findAll();
         return new ModelAndView("/error/test", "resultObject", comments);
     }
 

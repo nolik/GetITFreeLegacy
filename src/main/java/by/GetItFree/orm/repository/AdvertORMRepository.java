@@ -6,11 +6,11 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 /**
- * SpringData AdvertDAO repository.
+ * SpringData AdvertORMService repository.
  *
  * Created by Novik Igor on 10.02.2017.
  */
-public interface AdvertDAORepository extends CrudRepository<Advert,Integer> {
+public interface AdvertORMRepository extends CrudRepository<Advert,Integer> {
 
     List<Advert> findByHead(String head);
 

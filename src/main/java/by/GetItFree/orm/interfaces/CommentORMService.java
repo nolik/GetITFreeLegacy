@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by max on 10.02.2017.
  */
-public interface CommentDAO {
+public interface CommentORMService {
     List<Comment> findAll();
 
 

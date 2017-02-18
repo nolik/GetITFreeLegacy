@@ -1,7 +1,7 @@
 package by.GetItFree.orm.impl;
 
-import by.GetItFree.orm.interfaces.CommentDAO;
-import by.GetItFree.orm.repository.CommentDAORepository;
+import by.GetItFree.orm.interfaces.CommentORMService;
+import by.GetItFree.orm.repository.CommentORMRepository;
 import by.GetItFree.entities.Comment;
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,19 +14,19 @@ import java.util.List;
 /**
  * Created by max on 10.02.2017.
  */
-@Service("jpaCommentDAO")
+@Service("jpaCommentORMService")
 @Repository
 @Transactional
-public class CommentDAOImpl implements CommentDAO {
+public class CommentORMServiceImpl implements CommentORMService {
     @Autowired
-    private CommentDAORepository commentDAORepository;
+    private CommentORMRepository commentORMRepository;
     @Override
     public List<Comment> findAll() {
-        return Lists.newArrayList(commentDAORepository.findAll());
+        return Lists.newArrayList(commentORMRepository.findAll());
     }
 
     @Override
     public List<Comment> findByMessage(String message) {
-        return Lists.newArrayList(commentDAORepository.findByMessage(message));
+        return Lists.newArrayList(commentORMRepository.findByMessage(message));
     }
 }
