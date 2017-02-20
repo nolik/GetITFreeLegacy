@@ -36,6 +36,9 @@
         <!-- JUnit test -->
         <junit.version>4.12</junit.version>
 
+        <!-- Spring REST jackson JSON Processing API -->
+        <jackson.databind-version>2.8.4</jackson.databind-version>
+
     </properties>
 
     <dependencyManagement>
@@ -108,12 +111,11 @@
         </dependency>
 
 
-
         <!--MySQL Connector-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version> ${mysql-connector-version}</version>
+            <version>${mysql-connector-version}</version>
         </dependency>
 
 
@@ -158,6 +160,12 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Spring REST jackson JSON Processing API -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.databind-version}</version>
+        </dependency>
 
     </dependencies>
     <!--https://startbootstrap.com/template-overviews/3-col-portfolio/  this is theme-->

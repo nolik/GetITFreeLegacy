@@ -19,10 +19,10 @@ public interface AdvertORMService {
     List<Advert> findAll();
 
     /**
-     * Method returned list of Advert from the DB according ID.
+     * Method returned list of Advert from the DB according head.
      *
-     * @param head id of the Advert;
-     * @return Advertising according id.
+     * @param head head of the Advert;
+     * @return Advertising according head.
      */
     Advert findByHead(String head);
 }

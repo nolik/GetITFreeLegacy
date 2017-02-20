@@ -5,19 +5,19 @@
   Time: 20:24
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <html>
 <head>
     <title>Get IT Free Title</title>
     <spring:url value="/resources/css/bootstrap.css" var="bootstrap"/>
     <spring:url value="/resources/css/3-col-portfolio.css" var="startertemplate"/>
-    <link href="${bootstrap}" rel="stylesheet" />
-    <link href="${startertemplate}" rel="stylesheet" />
+    <link href="${bootstrap}" rel="stylesheet"/>
+    <link href="${startertemplate}" rel="stylesheet"/>
 </head>
 <html>
 
@@ -28,7 +28,8 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -77,7 +78,8 @@
             <h3>
                 <a href="#">Продам гараж</a>
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
+                urna varius vitae.</p>
         </div>
         <div class="col-md-4 portfolio-item">
             <a href="#">
@@ -86,7 +88,8 @@
             <h3>
                 <a href="#">Продам гараж</a>
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
+                urna varius vitae.</p>
         </div>
         <div class="col-md-4 portfolio-item">
             <a href="#">
@@ -95,7 +98,8 @@
             <h3>
                 <a href="#">Продам гараж</a>
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
+                urna varius vitae.</p>
         </div>
     </div>
     <!-- /.row -->
@@ -109,7 +113,8 @@
             <h3>
                 <a href="#">Продам гараж</a>
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
+                urna varius vitae.</p>
         </div>
         <div class="col-md-4 portfolio-item">
             <a href="#">
@@ -118,7 +123,8 @@
             <h3>
                 <a href="#">Продам гараж</a>
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
+                urna varius vitae.</p>
         </div>
         <div class="col-md-4 portfolio-item">
             <a href="#">
@@ -127,7 +133,8 @@
             <h3>
                 <a href="#">Продам гараж</a>
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
+                urna varius vitae.</p>
         </div>
     </div>
 
@@ -140,7 +147,8 @@
             <h3>
                 <a href="#">Продам гараж</a>
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
+                urna varius vitae.</p>
         </div>
         <div class="col-md-4 portfolio-item">
             <a href="#">
@@ -149,7 +157,8 @@
             <h3>
                 <a href="#">Продам гараж</a>
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
+                urna varius vitae.</p>
         </div>
         <div class="col-md-4 portfolio-item">
             <a href="#">
@@ -158,7 +167,8 @@
             <h3>
                 <a href="#">Продам гараж</a>
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
+                urna varius vitae.</p>
         </div>
     </div>
     <!-- /.row -->

@@ -36,7 +36,6 @@ public class TestController {
         System.out.println("ORMController ormFindAllUsers is called");
         List<Advert> adverts = jpaAdvertORMService.findAll();
         return new ModelAndView("/error/test", "resultObject", adverts);
-
     }
 
     @RequestMapping(value = "/jpaFindAllComments", method = RequestMethod.GET)
