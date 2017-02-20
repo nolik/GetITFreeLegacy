@@ -42,5 +42,26 @@
     <!-- Static Resources Configuration (get access to static sources such as CSS and JavaScript files) -->
     <mvc:resources mapping="/resources/**" location="/resources/" />
 
+    <mvc:interceptors>
 
+        <mvc:interceptor>
+            <mvc:mapping path="/*" />
+            <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+                <property name="paramName" value="languageVar" />
+            </bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+        <property name="defaultLocale" value="ru" />
+        <!-- cookieMaxAge in seconds. if you set it to -1, the cookie will be deleted when browser is closed) -->
+        <property name="cookieMaxAge" value="100000"/>
+    </bean>
+
+    <!-- MessageSource ReloadableResourceBundleMessageSource configuration -->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basenames" value="classpath:/locales/messages,classpath:util"/>
+        <property name="cacheSeconds" value="1"/>
+        <property name="defaultEncoding" value="UTF-8" />
+    </bean>
 </beans>
