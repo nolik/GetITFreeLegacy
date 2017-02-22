@@ -16,7 +16,7 @@
 <%--<a href="${adverts}" class="list-group-item">Find All Adverts</a>--%>
 
 
-<p1><spring:message code="navMenu.about"/></p1>
+    <p1><spring:message code="navMenu.about"/></p1>
 
 <br />
 ${resultObject}
