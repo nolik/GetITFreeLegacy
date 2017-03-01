@@ -6,6 +6,7 @@ import by.GetItFree.orm.interfaces.AdvertORMService;
 import by.GetItFree.orm.interfaces.CommentORMService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -36,6 +37,13 @@ public class TestController {
         System.out.println("ORMController ormFindAllUsers is called");
         List<Advert> adverts = jpaAdvertORMService.findAll();
         return new ModelAndView("/error/test", "resultObject", adverts);
+    }
+
+    @RequestMapping(value = "/jpaFindAdvertById/{id}", method = RequestMethod.GET)
+    public ModelAndView jpaFindAdvertById(@PathVariable int id) {
+        System.out.println("ORMController jpaFindAdvertById is called");
+        Advert advert = jpaAdvertORMService.getWithProfile(id);
+        return new ModelAndView("/error/test", "resultObject", advert);
     }
 
     @RequestMapping(value = "/jpaFindAllComments", method = RequestMethod.GET)

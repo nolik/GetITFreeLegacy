@@ -36,4 +36,11 @@ public class AdvertORMServiceImpl implements AdvertORMService {
 
         return (Advert) advertORMRepository.findByHead(head);
     }
+
+    @Override
+    public Advert getWithProfile(int id) {
+        return (Advert) advertORMRepository.getWithProfile(id);
+    }
+
+
 }

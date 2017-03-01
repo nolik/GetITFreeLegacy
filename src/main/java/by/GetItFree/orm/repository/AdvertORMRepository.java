@@ -1,6 +1,7 @@
 package by.GetItFree.orm.repository;
 
 import by.GetItFree.entities.Advert;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -11,5 +12,8 @@ import org.springframework.data.repository.CrudRepository;
 public interface AdvertORMRepository extends CrudRepository<Advert,Integer> {
 
     Advert findByHead(String head);
+
+    @Query("SELECT a From Advert a JOIN FETCH a.profile WHERE a.id=?1")
+    Advert getWithProfile(int id);
 
 }

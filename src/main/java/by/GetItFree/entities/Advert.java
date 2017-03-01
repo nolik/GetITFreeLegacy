@@ -171,7 +171,7 @@ public class Advert {
         return "Advert{" +
                 "id=" + id +
                 ", karmaReq='" + karmaReq + '\'' +
-                ", image=" + Arrays.toString(image) +
+//                ", image=" + Arrays.toString(image) +
                 ", profileId=" + profileId +
                 ", profileUsersUsername='" + profileUsersUsername + '\'' +
                 ", head='" + head + '\'' +

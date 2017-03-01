@@ -25,4 +25,7 @@ public interface AdvertORMService {
      * @return Advertising according head.
      */
     Advert findByHead(String head);
+
+
+    Advert getWithProfile(int id);
 }
