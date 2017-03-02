@@ -45,7 +45,7 @@
                 <prop key="hibernate.hbm2ddl.auto">update</prop>
                 <!--it's anti pattern need to delete it, and solv exception:-->
                 <!--failed to lazily initialize a collection of role could not initialize proxy - no Session-->
-                <prop key="hibernate.enable_lazy_load_no_trans">true</prop>
+                <!--<prop key="hibernate.enable_lazy_load_no_trans">true</prop>-->
             </props>
         </property>
     </bean>

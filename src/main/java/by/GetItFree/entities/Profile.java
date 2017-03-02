@@ -141,11 +141,11 @@ public class Profile {
                 ", usersUsername='" + usersUsername + '\'' +
                 ", karma=" + karma +
                 ", phone='" + phone + '\'' +
-                ", icon=" + Arrays.toString(icon) +
-                ", adverts=" + adverts +
-                ", comments=" + comments +
-                ", messages=" + messages +
-                ", usersByUsersUsername=" + usersByUsersUsername +
+//                ", icon=" + Arrays.toString(icon) +
+//                ", adverts=" + adverts +
+//                ", comments=" + comments +
+//                ", messages=" + messages +
+//                ", usersByUsersUsername=" + usersByUsersUsername +
                 '}';
     }
 }

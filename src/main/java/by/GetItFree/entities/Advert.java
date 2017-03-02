@@ -173,13 +173,13 @@ public class Advert {
                 ", karmaReq='" + karmaReq + '\'' +
 //                ", image=" + Arrays.toString(image) +
                 ", profileId=" + profileId +
-                ", profileUsersUsername='" + profileUsersUsername + '\'' +
+//                ", profileUsersUsername='" + profileUsersUsername + '\'' +
                 ", head='" + head + '\'' +
                 ", content='" + content + '\'' +
                 ", ordered=" + ordered +
                 ", date=" + date +
-//                ", profile=" + profile +
-                ", commentsById=" + commentsById +
+                ", profile=" + profile +
+//                ", commentsById=" + commentsById +
                 '}';
     }
 }
