@@ -1,5 +1,7 @@
 package by.GetItFree.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Arrays;
@@ -44,6 +46,7 @@ public class Advert {
 
     @Basic
     @Column(name = "image", nullable = false)
+    @JsonIgnore
     public byte[] getImage() {
         return image;
     }
@@ -149,6 +152,7 @@ public class Advert {
 
     @ManyToOne
     @JoinColumns({@JoinColumn(name = "profile_id", referencedColumnName = "id", nullable = false, insertable = false, updatable = false), @JoinColumn(name = "profile_users_username", referencedColumnName = "users_username", nullable = false, insertable = false, updatable = false)})
+    @JsonIgnore
     public Profile getProfile() {
         return profile;
     }
@@ -158,6 +162,7 @@ public class Advert {
     }
 
     @OneToMany(mappedBy = "advertByAdvertId")
+    @JsonIgnore
     public Collection<Comment> getCommentsById() {
         return commentsById;
     }
