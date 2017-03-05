@@ -39,6 +39,14 @@ public class TestController {
         return new ModelAndView("/error/test", "resultObject", adverts);
     }
 
+
+    @RequestMapping(value = "/testMain", method = RequestMethod.GET)
+    public ModelAndView testMain() {
+        System.out.println("testMain called");
+        List<Advert> adverts = jpaAdvertORMService.findAll();
+        return new ModelAndView("/error/testMain", "listOfAdverts", adverts);
+    }
+
     @RequestMapping(value = "/jpaFindAdvertById/{id}", method = RequestMethod.GET)
     public ModelAndView jpaFindAdvertById(@PathVariable int id) {
         System.out.println("ORMController jpaFindAdvertById is called");
