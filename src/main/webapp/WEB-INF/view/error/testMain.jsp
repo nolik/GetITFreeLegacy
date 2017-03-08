@@ -68,111 +68,32 @@
             </h1>
         </div>
     </div>
-    <!-- /.row -->
 
-    <!-- Projects Row -->
-    <div class="row">
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj1.jpg" alt="">
-            </a>
-            <h3>
-                <a href="#">${listOfAdverts.get(0).head}</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
-                urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj2.jpg" alt="">
-            </a>
-            <h3>
-                <a href="#">${listOfAdverts.get(1).head}</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
-                urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj5.jpg" alt="">
-            </a>
-            <h3>
-                <a href="#">Продам гораж</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
-                urna varius vitae.</p>
-        </div>
-    </div>
     <!-- /.row -->
-
-    <!-- Projects Row -->
+    <!-- Q-ty of row - it's the total lenth or recieving list of adverts/3 -->
+    <c:forEach var="rowIndex" begin="0" end="${listOfAdverts.size()/3-1}">
     <div class="row">
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj4.jpg" alt="">
-            </a>
-            <h3>
-                <a href="#">Продам гараж</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
-                urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj3.jpg" alt="">
-            </a>
-            <h3>
-                <a href="#">Продам гараж</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
-                urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj6.jpg" alt="">
-            </a>
-            <h3>
-                <a href="#">Продам гараж</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
-                urna varius vitae.</p>
-        </div>
-    </div>
 
-    <!-- Projects Row -->
-    <div class="row">
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj7.jpg" alt="">
-            </a>
-            <h3>
-                <a href="#">Продам гараж</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
-                urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj8.jpg" alt="">
-            </a>
-            <h3>
-                <a href="#">Продам гараж</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
-                urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj9.jpg" alt="">
-            </a>
-            <h3>
-                <a href="#">Продам гараж</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
-                urna varius vitae.</p>
-        </div>
+        <!-- Here have just iteration between current sublist of receiving list of adverts -->
+        <c:forEach var="advert" items="${listOfAdverts.subList(rowIndex*3,rowIndex*3+3)}">
+           <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj1.jpg"
+                         alt="">
+                </a>
+                <h3>
+                    <a href="#">${advert.head}
+                      ${rowIndex}</a>
+                </h3>
+                <p>${advert.content}</p>
+            </div>
+
+
+
+
+        </c:forEach>
     </div>
-    <!-- /.row -->
+    </c:forEach>
 
     <hr>
 
@@ -229,4 +150,3 @@
 
 </body>
 </html>
-
