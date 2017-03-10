@@ -69,30 +69,29 @@
         </div>
     </div>
 
-    <!-- /.row -->
-    <!-- Q-ty of row - it's the total lenth or recieving list of adverts/3 -->
+    <!— /.row —>
+    <!— Q-ty of row - it's the total lenth or recieving list of adverts/3 —>
     <c:forEach var="rowIndex" begin="0" end="${listOfAdverts.size()/3-1}">
-    <div class="row">
+        <div class="row">
 
-        <!-- Here have just iteration between current sublist of receiving list of adverts -->
-        <c:forEach var="advert" items="${listOfAdverts.subList(rowIndex*3,rowIndex*3+3)}">
-           <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="${pageContext.request.contextPath}/resources/images/garaj1.jpg"
-                         alt="">
-                </a>
-                <h3>
-                    <a href="#">${advert.head}
-                      ${rowIndex}</a>
-                </h3>
-                <p>${advert.content}</p>
-            </div>
+            <!— Here have just iteration between current sublist of receiving list of adverts —>
+            <c:forEach var="advert" items="${listOfAdverts.subList(rowIndex*3,rowIndex*3+3)}">
+                <div class="col-md-4 portfolio-item">
+                    <a href="#">
 
-
+                        <img class="img-responsive" src="getAdvertImage/<c:out value="${advert.id}"/>.do"/>
+                    </a>
+                    <h3>
+                        <a href="#">${advert.head}
+                                ${rowIndex}</a>
+                    </h3>
+                    <p>${advert.content}</p>
+                </div>
 
 
-        </c:forEach>
-    </div>
+
+            </c:forEach>
+        </div>
     </c:forEach>
 
     <hr>
