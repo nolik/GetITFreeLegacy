@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
 <head>
@@ -19,7 +20,9 @@
     <p1><spring:message code="navMenu.about"/></p1>
 
 <br />
-${resultObject}
 
+<c:forEach items="${resultObject}" var="item">
+    ${item}<br>
+</c:forEach>
 </body>
 </html>
