@@ -17,7 +17,7 @@ import java.util.List;
  * Created by max on 09.02.17.
  */
 @Controller
-public class TestController {
+public class RootController {
 
     @Autowired
     private AdvertORMService jpaAdvertORMService;
@@ -40,11 +40,21 @@ public class TestController {
     }
 
 
-    @RequestMapping(value = "/testMain", method = RequestMethod.GET)
-    public ModelAndView testMain() {
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ModelAndView getIndexPage() {
         System.out.println("testMain called");
         List<Advert> adverts = jpaAdvertORMService.findAll();
-        return new ModelAndView("/error/testMain", "listOfAdverts", adverts);
+        return new ModelAndView("/index", "listOfAdverts", adverts);
+    }
+
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    public ModelAndView aboutPage() {
+        return new ModelAndView("/about");
+    }
+
+    @RequestMapping(value = "/contact", method = RequestMethod.GET)
+    public ModelAndView contactPage() {
+        return new ModelAndView("/contact");
     }
 
     @RequestMapping(value = "/jpaFindAdvertById/{id}", method = RequestMethod.GET)
