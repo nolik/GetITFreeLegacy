@@ -28,4 +28,6 @@ public interface AdvertORMService {
 
 
     Advert getWithProfile(int id);
+
+    List<Advert> findFirst9ByOrderByDateDesc();
 }

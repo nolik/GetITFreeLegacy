@@ -44,6 +44,8 @@
                 </a>
         </h3>
         <p>${advert.content}</p>
+        <p>${advert.karmaReq}</p>
+        <p>${advert.profile.usersUsername}</p>
     </div>
 
 

@@ -4,6 +4,8 @@ import by.GetItFree.entities.Advert;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
+import java.util.List;
+
 /**
  * SpringData AdvertORMService repository.
  *
@@ -16,4 +18,5 @@ public interface AdvertORMRepository extends CrudRepository<Advert,Integer> {
     @Query("SELECT a From Advert a JOIN FETCH a.profile WHERE a.id=?1")
     Advert getWithProfile(int id);
 
+    List<Advert> findFirst9ByOrderByDateDesc();
 }

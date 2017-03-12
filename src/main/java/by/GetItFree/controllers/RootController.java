@@ -82,4 +82,11 @@ public class RootController {
         Advert advert = jpaAdvertORMService.getWithProfile(id);
         return new ModelAndView("/advert", "advert", advert);
     }
+
+    @RequestMapping(value = "/last-advert", method = RequestMethod.GET)
+    public ModelAndView getLast9Advert() {
+        System.out.println("findFirst9ByOrderByDateDesc");
+        List<Advert> advertList = jpaAdvertORMService.findFirst9ByOrderByDateDesc();
+        return new ModelAndView("/index", "listOfAdverts", advertList);
+    }
 }

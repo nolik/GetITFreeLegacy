@@ -24,5 +24,9 @@
 <c:forEach items="${resultObject}" var="item">
     ${item}<br>
 </c:forEach>
+
+<c:forEach items="${advertList}" var="item">
+    ${item.id}<br>
+</c:forEach>
 </body>
 </html>
