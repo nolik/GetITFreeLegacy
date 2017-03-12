@@ -75,4 +75,11 @@ public class RootController {
     public void throwException() {
         throw new RuntimeException();
     }
+
+    @RequestMapping(value = "/advert/{id}", method = RequestMethod.GET)
+    public ModelAndView viewAdvertById(@PathVariable int id) {
+        System.out.println("show advert by id="+id);
+        Advert advert = jpaAdvertORMService.getWithProfile(id);
+        return new ModelAndView("/advert", "advert", advert);
+    }
 }

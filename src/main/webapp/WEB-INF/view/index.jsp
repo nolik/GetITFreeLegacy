@@ -45,13 +45,13 @@
             <!— Here have just iteration between current sublist of receiving list of adverts —>
             <c:forEach var="advert" items="${listOfAdverts}">
                 <div class="col-md-4 portfolio-item">
-                    <a href="#">
+                    <a href="/advert/${advert.id}">
 
                         <img class="img-responsive" src="getAdvertImage/<c:out value="${advert.id}"/>.do"/>
                     </a>
                     <h3>
-                        <a href="#">${advert.head}
-                                ${rowIndex}</a>
+                        <a href="/advert/${advert.id}">${advert.head}
+                                 </a>
                     </h3>
                     <p>${advert.content}</p>
                 </div>
@@ -70,12 +70,12 @@
                 <!— Here have just iteration between current sublist of receiving list of adverts —>
                 <c:forEach var="advert" items="${listOfAdverts.subList(rowIndex*3,rowIndex*3+3)}">
                     <div class="col-md-4 portfolio-item">
-                        <a href="#">
+                        <a href="/advert/${advert.id}">
 
                             <img class="img-responsive" src="getAdvertImage/<c:out value="${advert.id}"/>.do"/>
                         </a>
                         <h3>
-                            <a href="#">${advert.head}
+                            <a href="/advert/${advert.id}">${advert.head}
                                     ${rowIndex}</a>
                         </h3>
                         <p>${advert.content}</p>
@@ -97,12 +97,12 @@
                        items="${listOfAdverts.subList((listOfAdverts.size()) - (listOfAdverts.size() mod 3),
                        listOfAdverts.size())}">
                 <div class="col-md-4 portfolio-item">
-                    <a href="#">
+                    <a href="/advert/${advert.id}">
 
                         <img class="img-responsive" src="getAdvertImage/<c:out value="${advert.id}"/>.do"/>
                     </a>
                     <h3>
-                        <a href="#">${advert.head}
+                        <a href="/advert/${advert.id}">${advert.head}
                         </a>
                     </h3>
                     <p>${advert.content}</p>
@@ -161,10 +161,10 @@
 <!-- /.container -->
 
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="../../resources/js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="../../resources/js/bootstrap.min.js"></script>
 
 </body>
 </html>
