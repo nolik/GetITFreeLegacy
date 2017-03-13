@@ -43,4 +43,10 @@ public class AdvertORMServiceImpl implements AdvertORMService {
     }
 
 
+    @Override
+    public List<Advert> findFirst9ByOrderByDateDesc() {
+
+        return Lists.newArrayList(advertORMRepository.findFirst9ByOrderByDateDesc());
+    }
+
 }

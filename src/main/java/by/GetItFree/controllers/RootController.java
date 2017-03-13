@@ -17,7 +17,7 @@ import java.util.List;
  * Created by max on 09.02.17.
  */
 @Controller
-public class TestController {
+public class RootController {
 
     @Autowired
     private AdvertORMService jpaAdvertORMService;
@@ -40,11 +40,21 @@ public class TestController {
     }
 
 
-    @RequestMapping(value = "/testMain", method = RequestMethod.GET)
-    public ModelAndView testMain() {
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ModelAndView getIndexPage() {
         System.out.println("testMain called");
         List<Advert> adverts = jpaAdvertORMService.findAll();
-        return new ModelAndView("/error/testMain", "listOfAdverts", adverts);
+        return new ModelAndView("/index", "listOfAdverts", adverts);
+    }
+
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    public ModelAndView aboutPage() {
+        return new ModelAndView("/about");
+    }
+
+    @RequestMapping(value = "/contact", method = RequestMethod.GET)
+    public ModelAndView contactPage() {
+        return new ModelAndView("/contact");
     }
 
     @RequestMapping(value = "/jpaFindAdvertById/{id}", method = RequestMethod.GET)
@@ -64,5 +74,19 @@ public class TestController {
     @RequestMapping(value = "/runtimeException", method = RequestMethod.GET)
     public void throwException() {
         throw new RuntimeException();
+    }
+
+    @RequestMapping(value = "/advert/{id}", method = RequestMethod.GET)
+    public ModelAndView viewAdvertById(@PathVariable int id) {
+        System.out.println("show advert by id="+id);
+        Advert advert = jpaAdvertORMService.getWithProfile(id);
+        return new ModelAndView("/advert", "advert", advert);
+    }
+
+    @RequestMapping(value = "/last-advert", method = RequestMethod.GET)
+    public ModelAndView getLast9Advert() {
+        System.out.println("findFirst9ByOrderByDateDesc");
+        List<Advert> advertList = jpaAdvertORMService.findFirst9ByOrderByDateDesc();
+        return new ModelAndView("/index", "listOfAdverts", advertList);
     }
 }

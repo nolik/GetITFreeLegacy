@@ -21,7 +21,7 @@
         HttpMessageConverter support for @RequestBody method parameters and @ResponseBody method return values
         from @RequestMapping or @ExceptionHandler methods.
      -->
-    <mvc:annotation-driven/>
+    <!--<mvc:annotation-driven/>-->
 
     <!-- activate @Transactional JPA annotation -->
     <tx:annotation-driven/>

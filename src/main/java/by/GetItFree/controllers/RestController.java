@@ -25,4 +25,11 @@ public class RestController {
         return jpaAdvertORMService.findByHead(headAdvert);
     }
 
+    @RequestMapping(value = "/rest/advert/{id}", method = RequestMethod.GET)
+    public @ResponseBody Advert getRestAdvertById(@PathVariable int id) {
+        System.out.println("get advert by id="+id);
+        Advert advert = jpaAdvertORMService.getWithProfile(id);
+        return advert;
+    }
+
 }
