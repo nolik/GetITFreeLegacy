@@ -38,6 +38,7 @@
     </div>
 
     <!— /.row —>
+    <%--showing advers from DB if lass 4 --%>
     <c:if test="${listOfAdverts.size()<4}">
 
         <div class="row">
@@ -62,6 +63,7 @@
 
     </c:if>
 
+    <%--showing advers from DB if more than 4 from DB--%>
     <c:if test="${listOfAdverts.size()>3}">
         <!— Q-ty of row - it's the total lenth or recieving list of adverts/3 —>
         <c:forEach var="rowIndex" begin="0" end="${(listOfAdverts.size()/3)-1}">
