@@ -3,17 +3,15 @@ package by.GetItFree.controllers;
 import by.GetItFree.entities.Advert;
 import by.GetItFree.orm.interfaces.AdvertORMService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Created by nolik on 21.02.17.
  */
-@Controller
-public class RestController {
+@RestController
+public class AdvertRestController {
 
     @Autowired
     private AdvertORMService jpaAdvertORMService;
@@ -32,4 +30,11 @@ public class RestController {
         return advert;
     }
 
+    @RequestMapping(value = "/rest/listLast9Adverts/", method = RequestMethod.GET)
+    public @ResponseBody
+    List<Advert> listLast9Adverts() {
+        System.out.println("get listLast9Adverts");
+        List<Advert> advert = jpaAdvertORMService.findFirst9ByOrderByDateDesc();
+        return advert;
+    }
 }

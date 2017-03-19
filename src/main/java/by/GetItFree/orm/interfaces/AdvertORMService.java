@@ -5,7 +5,7 @@ import by.GetItFree.entities.Advert;
 import java.util.List;
 
 /**
- * DAO interface responsible for operation with Advertising.
+ * ORM service interface responsible for operation with Advertising.
  * <p>
  * Created by Novik Igor on 09.02.2017.
  */

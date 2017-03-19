@@ -15,6 +15,7 @@
     <title>Advert</title>
     <spring:url value="/resources/css/bootstrap.css" var="bootstrap"/>
     <spring:url value="/resources/css/3-col-portfolio.css" var="startertemplate"/>
+    <spring:url value="/resources/css/bootstrap.min.css" var="startertemplate"/>
     <link href="${bootstrap}" rel="stylesheet"/>
     <link href="${startertemplate}" rel="stylesheet"/>
 
@@ -41,11 +42,19 @@
         </a>
         <h3>
             <a href="#">${advert.head}
-                </a>
+            </a>
         </h3>
+        <p class="legend"><spring:message code="karmaReq"/> ${advert.karmaReq}</p>
         <p>${advert.content}</p>
-        <p>${advert.karmaReq}</p>
+        <p>Ordered:${advert.ordered}</p>
+        <button type="button" class="btn btn-default btn-block">Order this advert</button>
+
+
+        <p>Author info:</p>
         <p>${advert.profile.usersUsername}</p>
+        <p>${advert.profile.karma}</p>
+
+
     </div>
 
 

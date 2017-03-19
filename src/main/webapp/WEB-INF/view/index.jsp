@@ -54,6 +54,7 @@
                         <a href="/advert/${advert.id}">${advert.head}
                                  </a>
                     </h3>
+                    <p><spring:message code="karmaReq"/> ${advert.karmaReq}</p>
                     <p>${advert.content}</p>
                 </div>
 
@@ -78,8 +79,9 @@
                         </a>
                         <h3>
                             <a href="/advert/${advert.id}">${advert.head}
-                                    ${rowIndex}</a>
+                                    </a>
                         </h3>
+                        <p><spring:message code="karmaReq"/> ${advert.karmaReq}</p>
                         <p>${advert.content}</p>
                     </div>
 
@@ -107,6 +109,7 @@
                         <a href="/advert/${advert.id}">${advert.head}
                         </a>
                     </h3>
+                    <p><spring:message code="karmaReq"/> ${advert.karmaReq}</p>
                     <p>${advert.content}</p>
                 </div>
 

@@ -19,7 +19,7 @@ public class Advert {
     private String profileUsersUsername;
     private String head;
     private String content;
-    private byte ordered;
+    private boolean ordered;
     private Timestamp date;
     private Profile profile;
     private Collection<Comment> commentsById;
@@ -96,12 +96,12 @@ public class Advert {
     }
 
     @Basic
-    @Column(name = "ordered", nullable = false)
-    public byte getOrdered() {
+    @Column(name = "ordered", nullable = false, columnDefinition = "TINYINT(1)")
+    public boolean getOrdered() {
         return ordered;
     }
 
-    public void setOrdered(byte ordered) {
+    public void setOrdered(boolean ordered) {
         this.ordered = ordered;
     }
 
@@ -145,7 +145,7 @@ public class Advert {
         result = 31 * result + (profileUsersUsername != null ? profileUsersUsername.hashCode() : 0);
         result = 31 * result + (head != null ? head.hashCode() : 0);
         result = 31 * result + (content != null ? content.hashCode() : 0);
-        result = 31 * result + (int) ordered;
+        result = 31 * result + (ordered ? 0 : 1);
         result = 31 * result + (date != null ? date.hashCode() : 0);
         return result;
     }
