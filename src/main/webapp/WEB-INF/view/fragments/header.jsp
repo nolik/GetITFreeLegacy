@@ -34,6 +34,9 @@
                 <li>
                     <a href="../contact"><spring:message code="header.contact"/></a>
                 </li>
+                <li>
+                    <a href="../uploadFile"><spring:message code="header.contact"/></a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

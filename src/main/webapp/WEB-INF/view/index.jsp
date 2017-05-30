@@ -33,6 +33,8 @@
         <div class="col-lg-12">
             <h1 class="page-header">Get IT Free Dashboard
                 <small>It's the latest add advert</small>
+                <div style="float: right"><a title="Add news" href="/add" class="btn btn-default valera"><span
+                            class="glyphicon glyphicon-plus"></span></a></div>
             </h1>
         </div>
     </div>
@@ -55,6 +57,14 @@
                                  </a>
                     </h3>
                     <p>${advert.content}</p>
+                    <a title="Read More" href="/advert/${advert.id}" class="btn btn-default">Read
+                        more...</a>
+                    <!-- Link to edit -->
+                    <a title="Edit" href="../edit/${advert.id}" class="btn btn-default"><span
+                            class="glyphicon glyphicon-edit"></span></a>
+                    <!-- Link to delete -->
+                    <a title="Delete" href="../delete/${advert.id}" class="btn btn-default"><span
+                            class="glyphicon glyphicon-remove"></span></a>
                 </div>
 
 
@@ -78,9 +88,17 @@
                         </a>
                         <h3>
                             <a href="/advert/${advert.id}">${advert.head}
-                                    ${rowIndex}</a>
+                                   </a>
                         </h3>
-                        <p>${advert.content}</p>
+                        <p class="valera">${advert.content}</p>
+                        <a title="Read More" href="/advert/${advert.id}" class="btn btn-default">Read
+                            more...</a>
+                        <!-- Link to edit -->
+                        <a title="Edit" href="../edit/${advert.id}" class="btn btn-default"><span
+                                class="glyphicon glyphicon-edit"></span></a>
+                        <!-- Link to delete -->
+                        <a title="Delete" href="../delete/${advert.id}" class="btn btn-default"><span
+                                class="glyphicon glyphicon-remove"></span></a>
                     </div>
 
 
@@ -107,7 +125,15 @@
                         <a href="/advert/${advert.id}">${advert.head}
                         </a>
                     </h3>
-                    <p>${advert.content}</p>
+                    <p >${advert.content}</p>
+                    <a title="Read More" href="/advert/${advert.id}" class="btn btn-default">Read
+                        more...</a>
+                    <!-- Link to edit -->
+                    <a title="Edit" href="../edit/${advert.id}" class="btn btn-default"><span
+                            class="glyphicon glyphicon-edit"></span></a>
+                    <!-- Link to delete -->
+                    <a title="Delete" href="../delete/${advert.id}" class="btn btn-default"><span
+                            class="glyphicon glyphicon-remove"></span></a>
                 </div>
 
 
@@ -164,6 +190,7 @@
 
 <!-- jQuery -->
 <script src="../../resources/js/jquery.js"></script>
+<script src="../../resources/js/mainJS.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="../../resources/js/bootstrap.min.js"></script>

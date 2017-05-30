@@ -8,172 +8,401 @@
     <artifactId>GetITFree</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <properties>
+    <!--<properties>-->
 
-        <!-- Generic properties -->
-        <java.version>1.8</java.version>
-        <!-- Web -->
-        <jsp.version>2.2</jsp.version>
-        <jstl.version>1.2</jstl.version>
-        <servlet.version>3.1.0</servlet.version>
+        <!--&lt;!&ndash; Generic properties &ndash;&gt;-->
+        <!--<java.version>1.8</java.version>-->
+        <!--&lt;!&ndash; Web &ndash;&gt;-->
+        <!--<jsp.version>2.2</jsp.version>-->
+        <!--<jstl.version>1.2</jstl.version>-->
+        <!--<servlet.version>3.1.0</servlet.version>-->
 
-        <!-- Spring -->
-        <spring-framework.version>4.3.6.RELEASE</spring-framework.version>
+        <!--&lt;!&ndash; Spring &ndash;&gt;-->
+        <!--<spring-framework.version>4.3.6.RELEASE</spring-framework.version>-->
 
-        <!-- Hibernate / JPA -->
-        <hibernate.version>5.0.1.Final</hibernate.version>
+        <!--&lt;!&ndash; Hibernate / JPA &ndash;&gt;-->
+        <!--<hibernate.version>5.0.1.Final</hibernate.version>-->
 
 
-        <!-- Spring Data -->
-        <spring-framework.data.version>1.9.1.RELEASE</spring-framework.data.version>
+        <!--&lt;!&ndash; Spring Data &ndash;&gt;-->
+        <!--<spring-framework.data.version>1.9.1.RELEASE</spring-framework.data.version>-->
 
-        <!-- Mysql connector -->
-        <mysql-connector-version>5.1.38</mysql-connector-version>
+        <!--&lt;!&ndash; Mysql connector &ndash;&gt;-->
+        <!--<mysql-connector-version>5.1.38</mysql-connector-version>-->
 
-        <!--Slf4J-->
-        <slf4j-version>1.7.22</slf4j-version>
+        <!--&lt;!&ndash;Slf4J&ndash;&gt;-->
+        <!--<slf4j-version>1.7.22</slf4j-version>-->
 
-        <!-- JUnit test -->
-        <junit.version>4.12</junit.version>
+        <!--&lt;!&ndash; JUnit test &ndash;&gt;-->
+        <!--<junit.version>4.12</junit.version>-->
 
-        <!-- Spring REST jackson JSON Processing API -->
-        <jackson.databind-version>2.8.4</jackson.databind-version>
+        <!--&lt;!&ndash; Spring REST jackson JSON Processing API &ndash;&gt;-->
+        <!--<jackson.databind-version>2.8.4</jackson.databind-version>-->
 
-    </properties>
+    <!--</properties>-->
 
-    <dependencyManagement>
-        <!--all spring dependencies -->
+    <!--<dependencyManagement>-->
+        <!--&lt;!&ndash;all spring dependencies &ndash;&gt;-->
+        <!--<dependencies>-->
+            <!--<dependency>-->
+                <!--<groupId>org.springframework</groupId>-->
+                <!--<artifactId>spring-framework-bom</artifactId>-->
+                <!--<version>${spring-framework.version}</version>-->
+                <!--<type>pom</type>-->
+                <!--<scope>import</scope>-->
+            <!--</dependency>-->
+        <!--</dependencies>-->
+    <!--</dependencyManagement>-->
+
+    <!--&lt;!&ndash;bootstrap webjars.org&ndash;&gt;-->
+
+    <!--<dependencies>-->
+
+        <!--&lt;!&ndash; Spring MVC &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-webmvc</artifactId>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; Other Servlet Web dependencies &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet</groupId>-->
+            <!--<artifactId>jstl</artifactId>-->
+            <!--<version>${jstl.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet</groupId>-->
+            <!--<artifactId>javax.servlet-api</artifactId>-->
+            <!--<version>${servlet.version}</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet.jsp</groupId>-->
+            <!--<artifactId>jsp-api</artifactId>-->
+            <!--<version>${jsp.version}</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+
+
+        <!--&lt;!&ndash;Add Spring Data And Hibernate dependencies&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;Hibernate ORM&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.hibernate</groupId>-->
+            <!--<artifactId>hibernate-entitymanager</artifactId>-->
+            <!--<version>${hibernate.version}</version>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash;Hibernate validator (contains @NotEmpty)&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.hibernate</groupId>-->
+            <!--<artifactId>hibernate-validator</artifactId>-->
+            <!--<version>5.1.0.Final</version>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash;Spring Data&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.data</groupId>-->
+            <!--<artifactId>spring-data-jpa</artifactId>-->
+            <!--<version>${spring-framework.data.version}</version>-->
+        <!--</dependency>-->
+
+
+        <!--&lt;!&ndash;MySQL Connector&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>mysql</groupId>-->
+            <!--<artifactId>mysql-connector-java</artifactId>-->
+            <!--<version>${mysql-connector-version}</version>-->
+        <!--</dependency>-->
+
+
+        <!--&lt;!&ndash;Logging module&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.slf4j</groupId>-->
+            <!--<artifactId>slf4j-api</artifactId>-->
+            <!--<version>${slf4j-version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.slf4j</groupId>-->
+            <!--<artifactId>jcl-over-slf4j</artifactId>-->
+            <!--<version>${slf4j-version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.slf4j</groupId>-->
+            <!--<artifactId>slf4j-log4j12</artifactId>-->
+            <!--<version>${slf4j-version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; Support methods from google. For example 'Lists.newArrayList()'&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>com.google.guava</groupId>-->
+            <!--<artifactId>guava</artifactId>-->
+            <!--<version>20.0</version>-->
+        <!--</dependency>-->
+
+
+        <!--&lt;!&ndash;JUnit Test&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>junit</groupId>-->
+            <!--<artifactId>junit</artifactId>-->
+            <!--<version>${junit.version}</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; Test Artifacts with Spring&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-test</artifactId>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; Spring REST jackson JSON Processing API &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>com.fasterxml.jackson.core</groupId>-->
+            <!--<artifactId>jackson-databind</artifactId>-->
+            <!--<version>${jackson.databind-version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>commons-io</groupId>-->
+            <!--<artifactId>commons-io</artifactId>-->
+            <!--<version>2.2</version>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash;Contains org.springframework.mail.javamail&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-context-support</artifactId>-->
+            <!--<version>${spring-framework.version}</version>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; Spring MVC Mail Related Dependency &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>javax.mail</groupId>-->
+            <!--<artifactId>mail</artifactId>-->
+            <!--<version>1.4.7</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.velocity</groupId>-->
+            <!--<artifactId>velocity</artifactId>-->
+            <!--<version>1.7</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.commons</groupId>-->
+            <!--<artifactId>commons-lang3</artifactId>-->
+            <!--<version>3.4</version>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/commons-lang/commons-lang &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>commons-lang</groupId>-->
+            <!--<artifactId>commons-lang</artifactId>-->
+            <!--<version>2.2</version>-->
+        <!--</dependency>-->
+
+        <properties>
+            <!-- Spring Security -->
+            <spring-security.version>4.0.4.RELEASE</spring-security.version>
+            <springframework.version>4.2.4.RELEASE</springframework.version>
+            <hibernate.version>4.3.6.Final</hibernate.version>
+            <testng.version>6.9.4</testng.version>
+            <mockito.version>1.10.19</mockito.version>
+            <h2.version>1.4.187</h2.version>
+            <dbunit.version>2.2</dbunit.version>
+            <!-- Mysql connector -->
+            <mysql-connector-version>5.1.38</mysql-connector-version>
+            <!-- Spring REST jackson JSON Processing API -->
+            <jackson.databind-version>2.8.4</jackson.databind-version>
+            <!--Slf4J-->
+            <slf4j-version>1.7.22</slf4j-version>
+        </properties>
+
         <dependencies>
+            <!-- Spring -->
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-framework-bom</artifactId>
-                <version>${spring-framework.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <artifactId>spring-core</artifactId>
+                <version>${springframework.version}</version>
             </dependency>
-        </dependencies>
-    </dependencyManagement>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${springframework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${springframework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${springframework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>${springframework.version}</version>
+            </dependency>
 
-    <!--bootstrap webjars.org-->
+            <!-- Hibernate -->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
 
-    <dependencies>
-
-        <!-- Spring MVC -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-        </dependency>
-
-        <!-- Other Servlet Web dependencies -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>${jstl.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>${servlet.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>jsp-api</artifactId>
-            <version>${jsp.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-
-        <!--Add Spring Data And Hibernate dependencies-->
-
-
-        <!--Hibernate ORM-->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
-
-        <!--Hibernate validator (contains @NotEmpty)-->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <version>5.1.0.Final</version>
-        </dependency>
-
-        <!--Spring Data-->
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
-            <version>${spring-framework.data.version}</version>
-        </dependency>
+            <!-- jsr303 validation -->
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>1.1.0.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>5.1.3.Final</version>
+            </dependency>
 
 
-        <!--MySQL Connector-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector-version}</version>
-        </dependency>
+
+            <!-- Servlet+JSP+JSTL -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>3.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>javax.servlet.jsp-api</artifactId>
+                <version>2.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>1.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${h2.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>dbunit</groupId>
+                <artifactId>dbunit</artifactId>
+                <version>${dbunit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.hsqldb</groupId>
+                <artifactId>hsqldb</artifactId>
+                <version>2.3.3</version>
+            </dependency>
+
+            <!--Contains org.springframework.mail.javamail-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${springframework.version}</version>
+            </dependency>
+
+            <!-- Spring MVC Mail Related Dependency -->
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>mail</artifactId>
+                <version>1.4.7</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity</artifactId>
+                <version>1.7</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.4</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>2.2</version>
+            </dependency>
 
 
-        <!--Logging module-->
-        <dependency>
+            <!--Spring Security-->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
+            <!--To start using the security namespace in your application context-->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
+            <!--Provides Spring Security’s JSP tag implementations.-->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-taglibs</artifactId>
+                <version>${spring-security.version}</version>
+                <type>jar</type>
+                <scope>compile</scope>
+            </dependency>
+    <!-- Spring REST jackson JSON Processing API -->
+    <dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>${jackson.databind-version}</version>
+    </dependency>
+
+            <!-- Support methods from google. For example 'Lists.newArrayList()'-->
+            <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+            </dependency>
+
+
+            <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.2</version>
+            </dependency>
+
+
+            <!--Logging module-->
+            <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j-version}</version>
-        </dependency>
-        <dependency>
+            </dependency>
+            <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
             <version>${slf4j-version}</version>
-        </dependency>
-        <dependency>
+            </dependency>
+            <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>${slf4j-version}</version>
             <scope>runtime</scope>
-        </dependency>
-
-        <!-- Support methods from google. For example 'Lists.newArrayList()'-->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>20.0</version>
-        </dependency>
+            </dependency>
 
 
-        <!--JUnit Test-->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
+            <!--MySQL Connector-->
+            <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-version}</version>
+            </dependency>
 
-        <!-- Test Artifacts with Spring-->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- Spring REST jackson JSON Processing API -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson.databind-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.2</version>
-        </dependency>
-
-    </dependencies>
-    <!--https://startbootstrap.com/template-overviews/3-col-portfolio/  this is theme-->
+        </dependencies>
+<!--https://startbootstrap.com/template-overviews/3-col-portfolio/  this is theme-->
 
     <build>
 

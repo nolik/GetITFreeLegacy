@@ -46,6 +46,12 @@
         <p>${advert.content}</p>
         <p>${advert.karmaReq}</p>
         <p>${advert.profile.usersUsername}</p>
+        <!-- Link to edit -->
+        <a title="Edit" href="../edit/${advert.id}" class="btn btn-default"><span
+                class="glyphicon glyphicon-edit"></span></a>
+        <!-- Link to delete -->
+        <a title="Delete" href="../delete/${advert.id}" class="btn btn-default"><span
+                class="glyphicon glyphicon-remove"></span></a>
     </div>
 
 
